@@ -1,0 +1,100 @@
+<DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Formulário</title>
+  </head>
+  
+  <body>
+	<h1 align="center" style="color: red; font-family: Trebuchet MS"">
+	AnimalShop
+	</h1>
+  </body>
+  <form action="/pagina-processa-dados-do-form" method="post" style="margin: 0 auto; width: 400px; padding: 1em; border: 2px solid #CCC; border-radius: 5px;">
+    <fieldset style="font-family: Trebuchet MS">
+	  <h1 style="color: green">
+	  Login:
+	  </h1>
+	  <div style="margin-top: 1em;">
+	    <label for="nome" style="display: inline; width: 90px; text-align: right;">Usuário:</label>
+		<br />
+  	    <input name="usuario_nome" type ="text" id="nome" style="font: 1em sans-serif; width: 300px; -moz-box-sizing: border-box; box-sizing: border-box; border: 1px solid #999;" />
+	  </div>
+	
+   	  <div style="margin-top: 1em;">
+	    <label for="senha" style="display: inline; width: 90px; text-align: right;">Senha:</label>
+		<br />
+	    <input name="usuario_senha" type="password" id="senha" style="font: 1em sans-serif; width: 300px; -moz-box-sizing: border-box; box-sizing: border-box; border: 1px solid #999;" />
+	  </div >
+	
+	  <div style="margin-top: 1em;">
+	    <label for="data" style="display: inline; width: 90px; text-align: right;">Data de Nascimento:</label>
+		<br />
+	    <input name="usuario_data" type="date" id="data" rows="4" maxlength=500 style="font: 1em sans-serif; width: 300px; -moz-box-sizing: border-box; box-sizing: border-box; border: 1px solid #999; vertical-align: top; height: 2em;" >
+	  </div>
+	
+	  <div style="margin-top: 1em;">
+	    <p style="display: inline;">
+		  Selecione seu gênero:
+		  <input type="radio" id="male" name="gender" value="Masculino" style="font: 1em sans-serif; border: 1px solid #999;" />
+		  <label for="male">Masculino</label>
+		  <input type="radio" id="female" name="gender" value="Feminino" style="font: 1em sans-serif; border: 1px solid #999;" />
+		  <label for="female">Feminino</label>
+		  <input type="radio" id="other" name="gender" value="Outro" style="font: 1em sans-serif; border: 1px solid #999;" />
+		  <label for="other">Outro</label>
+	    </p>
+	  </div>
+	</fieldset>
+	
+    <br />
+	
+	<fieldset>
+      <legend>
+	  Quais animais você gosta:
+	  </legend>
+      <p>
+        <input type="checkbox" id="cat" name="animal" value="Gato" style="font: 1em sans-serif; border: 1px solid #999;" />
+        <label for="cat">Gato</label>
+        <label for="intensity">- O quanto você gosta?</label>
+	    0
+        <input oninput="cat_result.value=parseInt(intensidade_gato.value)" type="range" id="intensidade_gato" name="cat-intensity" value="5" min="0" max="10" oninput="result.value = Intensidade.value" style="font: 1em sans-serif; border: 1px solid #999; width: 50;" />
+        10
+        =
+	    <output name="cat_result" for="intensidade_gato" >5</output>
+	    <br />
+		
+        <input type="checkbox" id="dog" name="animal" value="Cachorro" style="font: 1em sans-serif; border: 1px solid #999;" />
+        <label for="dog">Cachorro</label>
+	    <label for="intensity">- O quanto você gosta?</label>
+	    0
+        <input oninput="dog_result.value=parseInt(intensidade_cachorro.value)" type="range" id="intensidade_cachorro" name="dog-intensity" value="5" min="0" max="10" oninput="result.value = Intensidade.value" style="font: 1em sans-serif; border: 1px solid #999; width: 50;" />
+        10
+	    =
+	    <output name="dog_result" for="intensidade_cachorro">5</output>
+	    <br />
+		
+        <input type="checkbox" id="snake" name="animal" value="Cobra" style="font: 1em sans-serif; border: 1px solid #999;" />
+        <label for="snake">Cobra</label>
+	    <label for="intensity">- O quanto você gosta?</label>
+	    0
+        <input oninput="snake_result.value=parseInt(intensidade_cobra.value)" type="range" id="intensidade_cobra" name="snake-intensity" value="5" min="0" max="10" oninput="result.value = Intensidade.value" style="font: 1em sans-serif; border: 1px solid #999; width: 50;" />
+        10
+	    =
+	    <output name="snake_result" for="intensidade_cobra">5</output>
+      </p>
+	  
+    </fieldset>
+	
+	<div class="button" style="margin-top: 1em;">
+	  <button type="reset" style="margin-left: 230px">Limpar resposta</button>
+	</div>
+	
+    <div class="button" style="margin-top: 1em;">
+      <button type="submit" style="margin-left: 230px">Enviar resposta</button>
+    </div>
+	
+  </form> 
+  
+</html>
